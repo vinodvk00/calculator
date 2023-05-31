@@ -1,3 +1,12 @@
+const audio = new Audio("Mouse-Click-00-c-FesliyanStudios.com.mp3");
+const buttons = document.querySelectorAll("button");
+
+buttons.forEach(button => {
+  button.addEventListener("click", () => {
+    audio.play();
+  });
+});
+
 class Calculator{
     constructor(previousOperandTextElement, currentOperandTextElement){
         this.previousOperandTextElement = previousOperandTextElement
@@ -85,6 +94,8 @@ class Calculator{
 
 
 
+
+
 const numberButtons = document.querySelectorAll('[data-number]');
 const operationButtons = document.querySelectorAll('[data-operation]');
 const equalsButton = document.querySelector('[data-equals]');
@@ -123,4 +134,5 @@ deleteButton.addEventListener('click',button=>{
     calculator.delete()
     calculator.updateDisplay()
 })
+
 
